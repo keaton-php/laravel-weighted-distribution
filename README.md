@@ -80,7 +80,7 @@ west: 2
 
 Exactly 5, 3 and 2, and each team's leads are spread through the run. You ask `allocate()` where the next item goes, and it keeps count for you.
 
-It stays exact however long it runs. After every pick, each target is less than one item away from its exact share. Over 1,000 leads the random pick above is off by up to 21 leads, and the package is never off by more than 0.6.
+It stays exact however long it runs. After every pick, each target is less than one item away from its exact share. Over 1,000 leads the random pick above is off by up to 21.5 leads, and the package is never off by more than 0.6.
 
 ## What you can do with it
 
