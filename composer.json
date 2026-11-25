@@ -1,0 +1,74 @@
+{
+    "name": "keaton-php/laravel-weighted-distribution",
+    "description": "Deficit round-robin allocation across weighted targets with per-target caps.",
+    "keywords": [
+        "laravel",
+        "php",
+        "weighted",
+        "round-robin",
+        "deficit-round-robin",
+        "load-balancing",
+        "distribution",
+        "allocation",
+        "fairness"
+    ],
+    "homepage": "https://github.com/keaton-php/laravel-weighted-distribution",
+    "support": {
+        "issues": "https://github.com/keaton-php/laravel-weighted-distribution/issues",
+        "source": "https://github.com/keaton-php/laravel-weighted-distribution",
+        "docs": "https://kevineaton.dev/docs/laravel-weighted-distribution/",
+        "security": "https://github.com/keaton-php/laravel-weighted-distribution/security/policy"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kevin Eaton",
+            "email": "kevin@kevineaton.dev",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/cache": "^11.33.2||^12.0||^13.0",
+        "illuminate/contracts": "^11.33.2||^12.0||^13.0",
+        "illuminate/support": "^11.33.2||^12.0||^13.0"
+    },
+    "require-dev": {
+        "larastan/larastan": "^3.0",
+        "laravel/pint": "^1.18",
+        "orchestra/testbench": "^9.0||^10.0||^11.0",
+        "phpunit/phpunit": "^11.5||^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Keaton\\WeightedDistribution\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Keaton\\WeightedDistribution\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "analyse": "vendor/bin/phpstan analyse --memory-limit=1G",
+        "format": "vendor/bin/pint",
+        "lint": "vendor/bin/pint --test"
+    },
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Keaton\\WeightedDistribution\\WeightedDistributionServiceProvider"
+            ],
+            "aliases": {
+                "WeightedDistribution": "Keaton\\WeightedDistribution\\Facades\\WeightedDistribution"
+            }
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
