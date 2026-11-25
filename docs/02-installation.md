@@ -26,7 +26,7 @@ If you want to use the facade, publish the config file:
 php artisan vendor:publish --tag="weighted_distribution-config"
 ```
 
-You can then describe your distribution in `config/weighted_distribution.php`. Settings you leave out keep their defaults. [In a Laravel app](08-in-laravel.md) covers the config file and the facade. Without Laravel you pass the targets to `make()` yourself, like the examples in these docs do.
+You can then describe your distribution in `config/weighted_distribution.php`. Settings you leave out keep their defaults. [In a Laravel app](08-in-laravel.md) covers the config file and the facade. Without Laravel you call `make()` and add the targets with `target()` or `targets()`, like the examples in these docs do.
 
 The package is tested on PHP 8.2 to 8.4 against Laravel 11, 12 and 13.
 
